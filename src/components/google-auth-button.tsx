@@ -12,11 +12,13 @@ export function GoogleAuthButton() {
     setIsLoading(true);
     setError(null);
 
+    const redirectURL = process.env.NEXT_PUBLIC_BASE_URL ? `${process.env.NEXT_PUBLIC_BASE_URL}/auth/callback` : `${window.location.origin}/auth/callback`;
+
     const supabase = createClient();
     const { error } = await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}/auth/callback`,
+        redirectTo: redirectURL,
       },
     });
 
@@ -27,16 +29,16 @@ export function GoogleAuthButton() {
   };
 
   return (
-    <div className="flex flex-col gap-3">
-      <Button
+    // <div className="flex flex-col gap-3">
+      <button
         type="button"
-        className="w-full"
+        className="w-full rounded-md bg-gradient-to-r from-orange-400 to-teal-500 text-white font-medium py-3 hover:opacity-90 transition-opacity"
         onClick={handleGoogleSignIn}
         disabled={isLoading}
       >
         {isLoading ? "Redirecting..." : "Continue with Google"}
-      </Button>
-      {error && <p className="text-sm text-red-500">{error}</p>}
-    </div>
+      </button>
+    //   {error && <p className="text-sm text-red-500">{error}</p>}
+    // </div>
   );
 }
