@@ -62,7 +62,7 @@ const FEED_ITEMS: FeedItem[] = [
   },
 ];
 
-export default function HomePage(): JSX.Element {
+export default function HomePage() {
   const handleApplyFilter = (selectedTags: string[]): void => {
     // TODO: call the combined home-feed endpoint filtered by tag
     console.log("Applying filter:", selectedTags);

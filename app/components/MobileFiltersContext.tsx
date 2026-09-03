@@ -13,7 +13,7 @@ const MobileFiltersContext = createContext<MobileFiltersContextValue | null>(nul
 // Wraps the whole app (in layout.tsx) so any component — Header's button,
 // FilterableLayout's drawer — can read/set the same "is the mobile filter
 // drawer open" state, even though they live in different files.
-export function MobileFiltersProvider({ children }: { children: React.ReactNode }): JSX.Element {
+export function MobileFiltersProvider({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   return (

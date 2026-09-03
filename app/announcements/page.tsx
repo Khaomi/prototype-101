@@ -4,7 +4,7 @@ import Link from "next/link";
 import FilterableLayout from "../components/FilterableLayout";
 import { ANNOUNCEMENTS, summarize } from "../../lib/announcements";
 
-export default function AnnouncementsPage(): JSX.Element {
+export default function AnnouncementsPage() {
   const handleApplyFilter = (selectedTags: string[]): void => {
     // TODO: call the Search Controller (SRS-10, SRS-14), e.g.
     // fetch(`/api/content/announcement?tags=${selectedTags.join(",")}`)

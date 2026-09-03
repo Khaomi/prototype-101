@@ -12,7 +12,7 @@ type Props = {
   params: Promise<{ id: string }>;
 };
  
-export default function AnnouncementDetailPage({ params }: Props): JSX.Element {
+export default function AnnouncementDetailPage({ params }: Props) {
   const { id } = use(params);
   const router = useRouter();
   const announcement = ANNOUNCEMENTS.find((a) => a.id === id);

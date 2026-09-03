@@ -2,7 +2,7 @@
 
 import { signIn } from "next-auth/react";
 
-export default function LoginPage(): JSX.Element {
+export default function LoginPage() {
   const handleSignIn = (): void => {
     // NextAuth Google provider, restricted to @ku.th in the callback (SRS-13)
     signIn("google", { callbackUrl: "/announcements" });

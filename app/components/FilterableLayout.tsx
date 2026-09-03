@@ -14,7 +14,7 @@ type FilterableLayoutProps = {
 // Header's "Filters" button at every screen size (no separate desktop
 // sidebar) — filtering always happens through the same slide-in drawer,
 // on phone, tablet, or desktop alike.
-export default function FilterableLayout({ children, onApplyFilter }: FilterableLayoutProps): JSX.Element {
+export default function FilterableLayout({ children, onApplyFilter }: FilterableLayoutProps) {
   const [checked, setChecked] = useState<CheckedFilters>({});
   const { isOpen: filtersOpen, close: closeFilters } = useMobileFilters();
 

@@ -20,7 +20,7 @@ const NAV_ITEMS: NavItem[] = [
   { label: "Resource links", href: "/resources" },
 ];
 
-export default function Header(): JSX.Element {
+export default function Header() {
   const pathname = usePathname();
   const [mobileNavOpen, setMobileNavOpen] = useState<boolean>(false);
   const [query, setQuery] = useState<string>("");

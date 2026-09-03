@@ -27,7 +27,7 @@ type FilterPanelProps = {
   onApply: (selectedTags: string[]) => void;
 };
 
-export default function FilterPanel({ checked, onChange, onApply }: FilterPanelProps): JSX.Element {
+export default function FilterPanel({ checked, onChange, onApply }: FilterPanelProps) {
   const [openGroups, setOpenGroups] = useState<Record<string, boolean>>({});
 
   const toggleGroupOpen = (label: string): void =>
