@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { Analytics } from '@vercel/analytics/next';
 import { ThemeProvider } from "next-themes";
 import { Geist } from "next/font/google";
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.className} antialiased`}>
         <Analytics />
+        <SpeedInsights />
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
