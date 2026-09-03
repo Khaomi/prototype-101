@@ -1,7 +1,8 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  output: process.env.VERCEL ? undefined : "standalone",
+  cacheComponents: true,
 };
 
 export default nextConfig;
