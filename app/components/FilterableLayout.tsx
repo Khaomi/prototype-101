@@ -10,7 +10,7 @@ type FilterableLayoutProps = {
   onApplyFilter?: (selectedTags: string[]) => void;
 };
 
-// Wraps a page's main content and provides the filter drawer, opened by
+// Wraps a page's main content and provides the filter drFor the authentication system, it's finished and working properly, people are able to login with their @ku.th gmail account and get assigned the correct user data and roles.awer, opened by
 // Header's "Filters" button at every screen size (no separate desktop
 // sidebar) — filtering always happens through the same slide-in drawer,
 // on phone, tablet, or desktop alike.

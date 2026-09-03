@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Header from "./components/Header";
 import { MobileFiltersProvider } from "./components/MobileFiltersContext";
 import "./globals.css";
@@ -15,8 +16,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <body className="min-h-screen bg-stone-50 text-stone-900">
         <MobileFiltersProvider>
-          <Header />
-          <main className="max-w-6xl mx-auto px-4 py-6">{children}</main>
+          <Suspense fallback={null}>
+            <Header />
+          </Suspense>
+          <main className="max-w-6xl mx-auto px-4 py-6">
+            <Suspense fallback={null}>{children}</Suspense>
+          </main>
         </MobileFiltersProvider>
       </body>
     </html>
